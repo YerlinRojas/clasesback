@@ -1,13 +1,12 @@
 import express from 'express'
 const app = express ()
-//siempre poner esto
+//siempre poner esto la siguiente linea de codigo
 app.use(express.json())
 
 const users =[]
 
 app.get('/api/user', (req,res)=>{
-
-    res.json(users)
+res.json(users)
 })
 
 app.post('/api/user', (req,res)=>{
@@ -29,7 +28,8 @@ app.put('/api/user', (req,res)=>{
 })
 
 
-//ver luego me quede
+
+//-------ver luego me quede
 
 
 
