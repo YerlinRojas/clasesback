@@ -7,8 +7,7 @@ app.use(express.json())
 const users =[]
 
 app.get('/api/user', (req,res)=>{
-
-    res.json(users)
+res.json(users)
 })
 
 app.post('/api/user', (req,res)=>{
