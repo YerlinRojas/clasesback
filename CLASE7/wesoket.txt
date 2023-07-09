@@ -1,0 +1,3 @@
+establece dos sokect de endpoint 
+bidireccional el cliente pide info y el servidor lo da, o ambos casos
+socket.io es la libreria que vamos a usar, contenedor como web sokect
