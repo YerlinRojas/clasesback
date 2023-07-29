@@ -14,4 +14,6 @@ pass:
 user:
 yerlinrojas808
 
-
+para instalar paginate
+npm install mongoose-paginate-v2
+buscar listado 
