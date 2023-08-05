@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import handlebars from 'express-handlebars'
 import __dirname from './utils.js'
-import viewsRouter from './routes/views.route.js'
+import viewsRouter from './routes/views.routes.js'
 
 const app= express ()
 
