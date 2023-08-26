@@ -20,7 +20,9 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'handlebars')
 
 //VER HRS 1:08
-
+//passport tenemos que instlar
+//npm i passport passport-local
+// se puede instlar con google o facebook libreria de pasport
 app.use(session({
     store: MongoStore.create({
         mongoUrl: uri,

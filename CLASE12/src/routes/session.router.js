@@ -1,6 +1,7 @@
 import UserModel from '../model/user.model.js'
 import { Router } from 'express'
 import { createHash, isValidPassword } from "../utils.js";
+import passport from 'passport';
 
 
 const router = Router()
@@ -43,6 +44,22 @@ router.get('/profile', auth, (req, res) => {
     res.render('profile', user)
 })
 
+
+//GITHUB
+router.get('/login-github',
+passport.authenticate('github', {scope:['user:email']})
+, async(req,res)=>{})
+
+router.get(
+    '/githubcallback',
+    passport.authenticate('github', {failureRedirect: '/'}),
+    async(req,res)=>{
+
+    }
+)
+
+
+//ESTO ES PARA EL LOCAL CON AUTORIZACION SIN PASSPORT
 /* router.get('/', (req, res) => {res.send('OK')})
 
 // URL para render

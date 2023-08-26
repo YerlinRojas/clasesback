@@ -2,16 +2,33 @@ import passport from "passport";
 import local from 'passport-local'
 import UserModel from "../model/users.model.js";
 import { createHash, isValidPassword } from "../utils.js";
+import GitHubStrategy from 'passport-github2'
 
 /* 
+esto es para el github passport
 app ID: 375158
-
 Client ID: Iv1.b19296d3920fe722
 secret: 913c838342846ac2a815ac69e8df302b15d80307
 */
 
 const LocalStrategy = local.Strategy
 const initializePassport = () => {
+
+    passport.use('github', new GitHubStrategy(
+        {
+        clientID: 'Iv1.b19296d3920fe722',
+        clientSecret : '913c838342846ac2a815ac69e8df302b15d80307',
+        callbackURL: 'http://127.0.0.1:8080/githubcallback',
+        }, 
+    asyn (accessToken, refreshToken, profile, done) => {
+console.log(profile)
+        try {
+            
+        } catch (error) {
+            
+        }
+    })
+    )
 
     // register Es el nomber para Registrar con Local
     passport.use('register', new LocalStrategy(
